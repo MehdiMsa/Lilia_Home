@@ -1,0 +1,98 @@
+  -Dart lezem el class t'inheriti men class okhra, el class StatlessWidget importineha men flutter/material.dart
+
+  -Class hedhi lezemha built in Method(Function fe wost class) eli heya build we lezem te5ou as a parameter property
+  el datatype te3ou lezem ykoun buildContext we tnajem tsami parameter hedha eli t7eb 3lih(ena samitha 'context').
+
+  -Vue que ne5dmou be flutter eli howa based on widgets, el Function te3na lezem return type te3ha ykoun widget.
+
+  -kima el BuildContext, Widget heya bidha besh tkoun class which is PROVIDED BY material.dart
+
+  -El widget eli besh nreturniwha heya MaterialApp (PROVIDED BY material.dart zeda)
+
+  -MaterialApp te5ou barcha arguments eli homa esmhom already arguments
+
+  -sofar khdemna be 7aja esmha Positional arguments(parameters) maaneha el built method te5ou argument 'context' khater
+  it is one argument accepted just by giving it a name wel wa7id eli passed lel build function wa9telli flutter besh y3ayet 
+  lel build method eli besh tkoun passed lel 'context'
+
+  -MaterialApp testa3mel named arguments maaneha ki t3ayet el argument mahoush besh ykoun by order but instead besh ykoun
+
+  -Home howa el core widget lel flutter eli besh yloadih aal screen wa9telli ymanti el app(MaterialApp) lel ecran
+
+  -Text widget heya widget zeda PROVIDED BY flutter/material.dart elli homa BUILT-IN WIDGETS eli besh nestaamlouhom barcha
+  by name
+
+  -PS:MaterialApp is a CLASS we najmou naadiwlha data bel constructor!!!
+
+  -Besh n3aytou lel class te3na DaaHome fel main lezemna nestaamlou zeda built-in function PROVIDED BY flutter/material.dart
+  esmha RunApp
+
+  -Lezemna npassiw el class(DaaHome) kima function fe wost RunApp wenzidoha PARENTHESIS sinon nwalliw nestaamlouha as a type
+
+  -Build method responsible besh treturni widget jdid haka alesh saat lezmek tabda bel base widgets eli PROVIDED BY flutter
+  khater nesthakouhom fel details lel pixel controlling
+
+  !)PS: AY WIDGET RAHI DART CLASS FE EKHER EL MA9OULA WE ANDHA BUILD METHOD!!!
+
+  -@override is PROVIDED BY Dart we nestaamlouha besh tkhali code teena awdha7 we andhef we maaneha rana delibrately nestaamlouha
+  fe override lel build method eli heya mara okhra PROVIDED BY StatlessWidget bel implementation teena weli StatlessWidget tforcina
+  besh noverridiwha we MAANDNESH OPTION TAA NOT OVERRIDING IT
+
+  -@required is PROVIDED BY Flutter 
+
+  -Wost el body matnajem testa3mel ken widget wehed barka fel scaffold fe wost el MaterialApp
+  
+  -Famma different types of widgets menhom:
+    -Visible widgets fehom el input wel output data lel user kima:
+      -RaisedButton
+      -Text
+      -Card
+    -Invisible widgets fehom el control wel layout taa kifeh el widget tree tekhdem we kifeh tetshef kima:
+      -Row
+      -Column
+      -ListView
+    -Container widget eli mawjouda between the two categories eli hkina alihom alakhater heya invisible we tnajem taamlelha dharbet 
+    styling we trouchik we ri9 edheka besh tnajem traha.
+  
+  -Bref naarjou lel khedma s7i7a, besh najou nhottou buttons we text widgets, lezemna naamlou invisible layout widget eli heya 
+  Column widget. 
+ 
+  -Column widget tkhalina nrenderiw widgets fe wost'ha in column maaneha taht baadh'hom
+  -Row widget tkhalina nrenderiw widgets fe wost'ha in row maaneha bahdha baadh'hom
+
+  -Column / Row widgets aand'hom children widgets yekhdhou list of widgets
+
+  -Square brackets ykhaliwek taamel lists (never type of data (eli howa group of multiple data))
+
+  -Fel RaisedButton el onPressed function tekhedh value, maaneha value teeha function treturni VOID
+
+  -Najmou men bara el class tawa naamlou function ama idea khayba alekher el class teek lezem dima tekhdem STANDALONE maaneha
+  ay haja that belongs to widgets lezem temchi le fard class(data widget) besh tnajem tkoun el widget edhika STANDALONE UNIT
+
+  -Maaneha hajetna be funtion eli tekhou hatta arguments we traja3 hatta chay (void).
+
+  -State heya ay haja el application tnajem testa3melha kima el data.(username, index taa question eli amalneha example bekri, etc...)
+  
+  -App State heya el haja eli el user authentificationeha from a database
+  
+  -Widget State heya ay haja kima el user input wel loading spinner etc...
+
+  -far9 bin el Stateless wel StatefulWidget howa:
+    -Stateless Widget nestaamlouha to build methods eli yrenderiw el UI, tnajem tjib data men barra via el constructor 
+    taa el widget class ama data hedhi changes only externally we yre-renderi wa9telli input data yetbadel
+    -Stateful Widget kima el stateless widget tnajem tbadel el data externally zeda ama el widget ynajem ykoun andou Internal
+    State we widget bid'ha will be re-rendered
+
+  -Nestaamlou two classes fel StatefulWidget khater internally flutter yekhdem hakkeka khater el widget bidha tnajem tkoun recreated (MyApp)
+  wa9telli el external data tetbadel however el State tab9a heya did'ha khaterha attached lel widget wel element fel UI besh tnajem testore
+  el state 
+
+  -wa9telli t'heb taayet lel State widget lel StatefulWidget lezmek fel class taa el state tpointi(<EsmElStatefulClass>) we lezmek taamel 
+  createState constructor yreturni StateObject(eli howa null) eli howa connected lel Stateful widget.
+  
+  -Staamalna marra okhra @override khater createState heya method created by StatefulWidget lezemha tkoun overwritten
+
+  -PS: MANAAMLOUSH RETURN LE NULL!!!!
+
+  -SetState taayet lel build mara okhra besh taamel update lel widget eli khdemna aleha.
+  -final kbal el property tkhalik maadesh tnajem tbadel value teeha baed mataamel el initialization fel constructor
